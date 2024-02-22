@@ -12,7 +12,7 @@ function Navbar() {
         <div className="nav-list">
           <ul>
             <li>
-              <a href="#">ABOUTUS</a>
+              <a href="#">SHOP</a>
             </li>
             <li>
               <a href="#">DEPARTMENT</a>
