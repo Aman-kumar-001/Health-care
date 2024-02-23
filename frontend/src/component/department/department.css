@@ -6,11 +6,12 @@
 .Department-box{
     padding-top: 100px;
      width: 80%;
-     height: 200px;
+     height: 400px;
      margin: 0 auto;
      display: flex;
      justify-content: center;
-     align-items: center;   
+     align-items: center; 
+     margin-bottom: 150px;  
 }
 .box{
    width: 100%;
