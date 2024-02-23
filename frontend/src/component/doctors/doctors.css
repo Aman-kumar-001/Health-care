@@ -16,7 +16,20 @@
 
 }
 .doctor-h1{
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.doc-h1{
+    display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+}
+.doc-para{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
 }

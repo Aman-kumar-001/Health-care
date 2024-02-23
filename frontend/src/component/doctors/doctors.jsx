@@ -9,8 +9,8 @@ function doctors() {
     <div className="doctor-detail">
       <div className="doctor-heading">
         <div className="doctor-h1">
-          <h1>OUR DOCTORS</h1>
-          <p>
+          <h1 className="doc-h1">OUR DOCTORS</h1>
+          <p className="doc-para">
             Incilint sapiente illo quo praesentium officiis laudantium nostrum,
             ad adipisci cupiditate sit, quisquam aliquid. Officiis laudantium
             fuga ad voluptas aspernatur error fugiat quos facilis saepe quas
