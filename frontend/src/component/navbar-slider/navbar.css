@@ -98,14 +98,42 @@ ul li a:hover {
     align-items: center;
     color: #fff;
     font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+    position:relative ;
+}
+.sliding-button{
+    color: #fff;
+    margin-right: 20px;
+    font-size: 20px;
+    left: 50px;
+    position: absolute;
+    top: 400px 
+}
+.sliding-button:hover{
+       font-size: 23px;
+       cursor: pointer;
+}
+.sliding-button2{
+    color: #fff;
+    margin-left: 20px;
+    font-size: 20px;
+    right: 50px;
+    position: absolute;
+    top: 400px;
+    
+}
+.sliding-button2:hover{
+       font-size: 23px;
+       cursor: pointer;
 }
 
 .first {
-
+    position: absolute;
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 h1 {
@@ -138,4 +166,12 @@ h1 {
     color: white;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 
+}
+.second{
+    position: absolute;
+    width: 100%;
+}
+.third{
+    position: absolute;
+    width: 100%;
 }
