@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.Department-box{
+    padding-top: 100px;
+     width: 80%;
+     height: 200px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;   
+}
+.box{
+   width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 30px 30px 400px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1200px;
+}
+.d-h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    padding-bottom: 10px;   
+}
+.d-para{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    font-size: 20px;
+}
+.option{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
