@@ -2,10 +2,11 @@ import React from "react";
 import "../navbar-slider/navbar.css";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Navbar() {
 
-
+const navigate = useNavigate();
   return (
     <div className="outer-nav">
       <div className="nav">
@@ -27,7 +28,7 @@ function Navbar() {
               <a href="#">CONTACT-US</a>
             </li>
             <li>
-              <a href="#" className="login-button">
+              <a  className="login-button" onClick={() => navigate("/login")}>
                 LOGIN/REGISTER
               </a>
             </li>
