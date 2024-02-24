@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Aspirin",
+        "price": 21.50,
+        "url": "https://ibb.co/SXfjQYK"
+      },
+      {
+        "id": 2,
+        "name": "Advil",
+        "price": 2000,
+        "url": "https://ibb.co/TtMCLnv"
+      },
+      {
+        "id": 3,
+        "name": "Paracetamol",
+        "price": 70,
+        "url": "https://ibb.co/k6mpJdy"
+      },
+      {
+        "id": 4,
+        "name": "Benadryl",
+        "price": 90,
+        "url": "https://ibb.co/kKkz00L"
+      },
+      {
+        "id": 5,
+        "name": "Zantac",
+        "price": 23.58,
+        "url": "https://ibb.co/pf8pMj9"
+      },
+      {
+        "id": 6,
+        "name": "Prilosec",
+        "price": 800,
+        "url": "https://ibb.co/0X19k4z"
+      },
+      {
+        "id": 7 ,
+        "name": "Metformin",
+        "price":  36 ,
+        "url": "https://ibb.co/DGqZ65d"
+      },
+      {
+        "id": 8,
+        "name": "Ezetrol",
+        "price":  450 ,
+        "url": "https://ibb.co/ky7zHpB"
+      },
+      {
+        "id": 9,
+        "name": "euthyrox",
+        "price": 100,
+        "url": "https://ibb.co/VNGHZpY"
+      },
+      {
+        "id":10 ,
+        "name": "lisinopril",
+        "price": 197,
+        "url": "https://ibb.co/7SVGcsz"
+      }
+]
