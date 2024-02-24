@@ -3,6 +3,7 @@ import Navbar from '../navbar-slider/navbar';
 import Department from '../department/department';
 import About from '../about/about';
 import Doctors from '../doctors/doctors';
+import Contactus from '../contact us/contactus';
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
         <Department />
         <About/>
         <Doctors/>
+        <Contactus/>
     </div>
   )
 }

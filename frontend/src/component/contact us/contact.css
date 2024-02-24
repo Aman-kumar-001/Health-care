@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact{
+  height: 600px;
+  width: 100%;
+  margin-top: 100px;
+ 
+}
+.contact-box{
+   width: 80%;
+   height: 600px;
+    margin: 0 auto;
+    display: flex;
+    display: flex;
+    align-items: center;
+}
+.contact-form{
+  width: 50%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+}
+form h2{
+    font-size:30px ;
+    padding-bottom: 10px;
+}
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input input{
+    font-size: 25px;
+    border: none;
+    background: #eeeeee;
+   
+}
+.contact-form input{
+    font-size: 30px;
+    border: none;
+    background: #eeeeee;
+    padding: 15px 15px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.contact-form input:hover{
+    border: 1px solid #1fab89;
+    cursor: pointer;
+}
+.map{
+    display: flex;
+   width: 50%;
+   
+}
+ form .sub-button{
+    width: 100%;
+    /* border: none; */
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 55px;
+    background-color: #1fab89;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: all 0.3s;
+    border: 1px solid #1fab89;
+}
+form .sub-button:hover{
+    cursor: pointer;
+    color: #1fab89;
+    border: 1px solid #1fab89;
+    background-color: #ffffff;
+}
+
+iframe{
+    width:500px;
+    height:500px;
+    border: 2px solid #62d2a2;
+    border-radius: 5px;
+    display: flex;
+    margin: 0 auto;
+}
+iframe:hover{
+    box-shadow: 5px 5px 5px 5px #08adce28;
+    cursor: pointer;
+    outline: none;
+}
