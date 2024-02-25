@@ -19,7 +19,7 @@ const navigate = useNavigate();
               <a  onClick={() => navigate("/shop")}>SHOP</a>
             </li>
             <li>
-              <a href="#">DEPARTMENT</a>
+              <a href="#">CART</a>
             </li>
             <li>
               <a href="#">DOCTORS</a>
