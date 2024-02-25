@@ -5,8 +5,12 @@ import { IoIosMail } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
 import { CiLogin } from "react-icons/ci";
+import {  useNavigate } from "react-router-dom";
 
 function Login() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="login">
       <div className="login-box">
@@ -43,7 +47,7 @@ function Login() {
           </div>
           <span>or</span>
           <div>
-          <CiLogin/>  <button className="register-button">LOGIN</button>
+          <CiLogin/>  <button className="register-button" onClick={() => navigate("/register")}>LOGIN</button>
           </div>
         </form>
       </div>
