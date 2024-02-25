@@ -11,7 +11,7 @@
     background-size: cover;
     background-position: center;
     z-index: -1;
-    margin-bottom: 150px 
+    margin-bottom: 150px
 }
 
 .nav {
@@ -68,10 +68,10 @@ ul li a:hover {
 .login-button {
     padding: 10px 20px;
     border: 2px solid #32AD92;
-    /* Green border */
+
     background-color: transparent;
     color: white;
-    /* Green text */
+
     font-size: 16px;
     cursor: pointer;
     outline: none;
@@ -101,32 +101,36 @@ ul li a:hover {
     color: #fff;
     font-family: 'Nunito', sans-serif;
     overflow: hidden;
-    position:relative ;
+    position: relative;
 }
-.sliding-button{
+
+.sliding-button {
     color: #fff;
     margin-right: 20px;
     font-size: 20px;
     left: 50px;
     position: absolute;
-    top: 400px 
+    top: 400px
 }
-.sliding-button:hover{
-       font-size: 23px;
-       cursor: pointer;
+
+.sliding-button:hover {
+    font-size: 23px;
+    cursor: pointer;
 }
-.sliding-button2{
+
+.sliding-button2 {
     color: #fff;
     margin-left: 20px;
     font-size: 20px;
     right: 50px;
     position: absolute;
     top: 400px;
-    
+
 }
-.sliding-button2:hover{
-       font-size: 23px;
-       cursor: pointer;
+
+.sliding-button2:hover {
+    font-size: 23px;
+    cursor: pointer;
 }
 
 .first {
@@ -138,7 +142,7 @@ ul li a:hover {
     width: 100%;
 }
 
-.h1 h1{
+.h1 h1 {
     padding-top: 2px;
     font-size: 50px;
 }
@@ -146,34 +150,36 @@ ul li a:hover {
 .para {
     padding-top: 20px;
     width: 50%;
-    
+
 }
 
 .slide-button {
-   background-color: #fff;
+    background-color: #fff;
     color: #53B5A6;
     border: 2px solid #fff;
     margin-top: 20px;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer ;
+    cursor: pointer;
     outline: none;
     transition: all 0.3s ease;
     width: 165px;
     text-align: center;
 }
 
-.slide-button:hover{
+.slide-button:hover {
     background-color: #53B5A6;
     color: white;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 
 }
-.second{
+
+.second {
     position: absolute;
     width: 100%;
 }
-.third{
+
+.third {
     position: absolute;
     width: 100%;
 }

@@ -1,12 +1,49 @@
-import React from 'react';
+import React from "react";
 import "../login/login.css";
+import { IoMdPerson, IoIosCloudDone } from "react-icons/io";
+import { IoIosMail } from "react-icons/io";
+import { RiLockPasswordFill } from "react-icons/ri";
+import { FaPhone, FaLocationDot } from "react-icons/fa6";
 
 function Login() {
   return (
-    <div>
-      dkjfjsdn
+    <div className="login">
+      <div className="login-box">
+        <form>
+          <label>
+            <h1>REGISTER</h1>
+          </label>
+          <div>
+            <IoMdPerson /> <input type="text" placeholder="Enter Your Name" />
+          </div>
+          <div>
+            <IoIosMail />
+            <input type="email" placeholder="Email" />
+          </div>
+          <div>
+            <RiLockPasswordFill />
+            <input type="password" placeholder="Enter your Password" />
+          </div>
+          <div>
+            <RiLockPasswordFill />
+            <input type="password" placeholder="Re-enter your Password" />
+          </div>
+          <div>
+            <FaPhone />
+            <input type="tel" placeholder="Phone" />
+          </div>
+          <div>
+            <FaLocationDot />
+            <input type="text" placeholder="Address" />
+          </div>
+          <div>
+            <IoIosCloudDone />
+            <button className="register-button">REGISTER</button>
+          </div>
+        </form>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Login;
