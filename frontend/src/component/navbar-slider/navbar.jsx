@@ -16,7 +16,7 @@ const navigate = useNavigate();
         <div className="nav-list">
           <ul>
             <li>
-              <a href="#">SHOP</a>
+              <a  onClick={() => navigate("/shop")}>SHOP</a>
             </li>
             <li>
               <a href="#">DEPARTMENT</a>

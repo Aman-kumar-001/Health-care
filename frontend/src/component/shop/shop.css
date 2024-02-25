@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.shop{
+    width: 100vw;
+    height: 100vh;
+}
+.shop-navbar{
+
+}
+.shop-nav{
+    display: flex;
+    background-color:#55b5a5;
+    color: white;
+
+}
+ .logo{
+    width: 30%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+}
+.logo sub {
+    font-family: 'Nunito', sans-serif;
+    /* font-size: px; */
+}
