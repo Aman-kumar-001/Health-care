@@ -1,6 +1,6 @@
 import React from "react";
 import "../login/login.css";
-import { IoMdPerson, IoIosCloudDone } from "react-icons/io";
+import { IoMdPerson } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
@@ -42,7 +42,7 @@ function Login() {
             <input type="text" placeholder="Address" />
           </div>
           <div>
-            <IoIosCloudDone />
+          <CiLogin/>
             <button className="register-button">REGISTER</button>
           </div>
           <span>or</span>
