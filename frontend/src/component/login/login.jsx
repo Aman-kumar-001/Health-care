@@ -4,6 +4,7 @@ import { IoMdPerson, IoIosCloudDone } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
 import { RiLockPasswordFill } from "react-icons/ri";
 import { FaPhone, FaLocationDot } from "react-icons/fa6";
+import { CiLogin } from "react-icons/ci";
 
 function Login() {
   return (
@@ -39,6 +40,10 @@ function Login() {
           <div>
             <IoIosCloudDone />
             <button className="register-button">REGISTER</button>
+          </div>
+          <span>or</span>
+          <div>
+          <CiLogin/>  <button className="register-button">LOGIN</button>
           </div>
         </form>
       </div>
