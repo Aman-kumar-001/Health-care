@@ -1,8 +1,7 @@
 import React from "react";
 import "../shop/shop.css";
 import { useNavigate } from "react-router-dom";
-import IMG from '../../images/d1.jpg'
-
+import IMG from "../../images/d1.jpg";
 
 function Shop() {
   const navigate = useNavigate();
@@ -38,43 +37,44 @@ function Shop() {
         </div>
       </div>
 
-      <div className="shop-banner">
-       {/* //bannner of medicine */}
-      </div>
-
-
-
+      <div className="shop-banner">{/* //bannner of medicine */}</div>
 
       <div className="shop-item">
         <div className="shop-item1">
-            <div className="item-box">
-                <div>
-                    <img src={IMG} />      
-              </div>
-                <div>Ayurvedic</div>
-                <div>RS - 250/-</div>
-                <div><button>ADD TO CART</button></div>
+          <div className="item-box">
+            <div>
+              <img src={IMG} />
             </div>
+            <div>Ayurvedic</div>
+            <div>RS - 250/-</div>
+            <div>
+              <button>ADD TO CART</button>
+            </div>
+          </div>
         </div>
         <div className="shop-item2">
-        <div className="item-box">
-                <div>
-                    <img src={IMG} />      
-              </div>
-                <div>Ayurvedic</div>
-                <div>RS - 250/-</div>
-                <div><button>ADD TO CART</button></div>
+          <div className="item-box">
+            <div>
+              <img src={IMG} />
             </div>
+            <div>Ayurvedic</div>
+            <div>RS - 250/-</div>
+            <div>
+              <button>ADD TO CART</button>
+            </div>
+          </div>
         </div>
         <div className="shop-item3">
-        <div className="item-box">
-                <div>
-                    <img src={IMG} />      
-              </div>
-                <div>Ayurvedic</div>
-                <div>RS - 250/-</div>
-                <div><button>ADD TO CART</button></div>
+          <div className="item-box">
+            <div>
+              <img src={IMG} />
             </div>
+            <div>Ayurvedic</div>
+            <div>RS - 250/-</div>
+            <div>
+              <button>ADD TO CART</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
