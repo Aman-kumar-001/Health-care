@@ -58,7 +58,7 @@ useEffect(() =>{
         {item.map((data,index) => {
           return(
             <>
-        <div  key={index} className="shop-item1">
+        <div  key={data.id} className="shop-item1">
           <div className="item-box">
             <div>
               <img src={data.url} />
