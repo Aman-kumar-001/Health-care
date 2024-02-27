@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../shop/shop.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "../footer/footer";
 import IMG from "../../images/d1.jpg";
 
+
 function Shop() {
   const navigate = useNavigate();
+
+  const [item , Setitem ] = useState({})
+
+  const Getapi =  async(e) =>{
+    e.preventDefault();
+    const response = await fetch('http://localhost:8080/api')
+ const data = await response.JSON();
+ console.log(data);
+}
 
   return (
     <div className="shop">
