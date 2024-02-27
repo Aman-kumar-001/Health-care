@@ -12,7 +12,7 @@ server.use(bodyParser.json())
 
 server.get('/api' , async(req,res) =>{
     res.send(data);
-
+    // res.send('aagya nnn')
 })
 
 server.listen(8080 , () => {

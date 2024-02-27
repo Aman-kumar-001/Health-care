@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../shop/shop.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "../footer/footer";
@@ -8,14 +8,18 @@ import IMG from "../../images/d1.jpg";
 function Shop() {
   const navigate = useNavigate();
 
-  const [item , Setitem ] = useState({})
+  const [item , Setitem ] = useState([])
 
-  const Getapi =  async(e) =>{
-    e.preventDefault();
+  const Getapi =  async() =>{
+    // e.preventDefault();
     const response = await fetch('http://localhost:8080/api')
- const data = await response.JSON();
- console.log(data);
+ const data = await response.json();
+ Setitem(data);
 }
+
+useEffect(() =>{
+  Getapi();
+},[])
 
   return (
     <div className="shop">
@@ -51,47 +55,37 @@ function Shop() {
       <div className="shop-banner">{/* //bannner of medicine */}</div>
 
       <div className="shop-item">
-        <div className="shop-item1">
+        {item.map((data,index) => {
+          return(
+            <>
+        <div  key={index} className="shop-item1">
           <div className="item-box">
             <div>
-              <img src={IMG} />
+              <img src={data.url} />
             </div>
-            <div>Ayurvedic</div>
-            <div>RS - 250/-</div>
+            <div>{data.name}</div>
+            <div>{data.price}</div>
             <div>
               <button>ADD TO CART</button>
             </div>
           </div>
         </div>
-        <div className="shop-item2">
-          <div className="item-box">
-            <div>
-              <img src={IMG} />
-            </div>
-            <div>Ayurvedic</div>
-            <div>RS - 250/-</div>
-            <div>
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div>
-        <div className="shop-item3">
-          <div className="item-box">
-            <div>
-              <img src={IMG} />
-            </div>
-            <div>Ayurvedic</div>
-            <div>RS - 250/-</div>
-            <div>
-              <button>ADD TO CART</button>
-            </div>
-          </div>
-        </div>
-      </div>
+        </>
+        
+       );
+      })}
+
+      
      <Footer/>
     </div>
-   
+   </div>
   );
 }
 
 export default Shop;
+
+
+
+
+
+ // 

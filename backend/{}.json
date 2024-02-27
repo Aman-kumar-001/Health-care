@@ -45,7 +45,7 @@
         "id": 8,
         "name": "Ezetrol",
         "price":  450 ,
-        "url": "https://ibb.co/ky7zHpB"
+        "url": "https://www.kasandbox.org/programming-images/avatars/spunky-sam.png"
       },
       {
         "id": 9,
@@ -58,5 +58,17 @@
         "name": "lisinopril",
         "price": 197,
         "url": "https://ibb.co/7SVGcsz"
+      },
+      {
+        "id": 11,
+        "name": "Advil",
+        "price": 2000,
+        "url": "https://ibb.co/TtMCLnv"
+      },
+      {
+        "id": 12,
+        "name": "Advil",
+        "price": 2000,
+        "url": "https://ibb.co/TtMCLnv"
       }
 ]
