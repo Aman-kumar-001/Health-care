@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../shop/shop.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "../footer/footer";
-import IMG from "../../images/d1.jpg";
+// import IMG from "../../images/d1.jpg";
 
 
 function Shop() {
