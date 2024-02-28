@@ -8,12 +8,17 @@
     width: 100%;
     height: 100%;
 }
+.shop-navbar{
+    position: sticky;
+    top: 0;
+
+}
 
 .shop-nav {
     display: flex;
     background-color: #55b5a5;
     color: white;
-
+   
 }
 
 .logo {

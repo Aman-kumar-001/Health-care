@@ -34,7 +34,7 @@ useEffect(() =>{
                 <a onClick={() => navigate("/")}>HOME</a>
               </li>
               <li>
-                <a href="#">CART</a>
+                <a onClick={() => navigate("/cart")}>CART</a>
               </li>
               <li>
                 <a href="#">DOCTORS</a>
