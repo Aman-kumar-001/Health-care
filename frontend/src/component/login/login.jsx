@@ -14,7 +14,7 @@ function Login() {
   const [user , Setuser] = useState({});
 
   const handlechange = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     Setuser({
       ...user,
       [e.target.name] : e.target.value

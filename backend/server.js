@@ -31,16 +31,23 @@ server.use(bodyParser.json())
 
 
 server.post('/register' , async(req,res) =>{
-    let user = new User();
-    user.name =req.body.username
-    user.email =req.body.email
-    user.password =req.body.password
-    user.phone =req.body.phone
-    user.address =req.body.address
-    const doc = await user.save();
-    
-    console.log(doc);
-    res.send('user added');
+   const alreadyUser =  await User.findOne({email:req.body.email})
+    if(alreadyUser){
+        res.send('user already exists');
+    }else{
+       
+        let user = new User();
+        user.name =req.body.username
+        user.email =req.body.email
+        user.password =req.body.password
+        user.phone =req.body.phone
+        user.address =req.body.address
+        const doc = await user.save();
+        
+        console.log(doc);
+        res.send('user added');
+    }
+   
     
 })
 
