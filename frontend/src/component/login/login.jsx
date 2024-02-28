@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../login/login.css";
 import { IoMdPerson } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
@@ -11,39 +11,64 @@ function Login() {
 
   const navigate = useNavigate();
 
+  const [user , Setuser] = useState({});
+
+  const handlechange = (e) => {
+    e.preventDefault();
+    Setuser({
+      ...user,
+      [e.target.name] : e.target.value
+    })
+    // console.log(user);
+    
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const response =  await fetch('http://localhost:8080/login', {
+      method: 'POST',
+      body:JSON.stringify(user),
+      headers:{
+        'Content-Type' : 'application/json'
+      }
+    })
+    const data = await response.json();
+    console.log(data);
+  }
+
   return (
     <div className="login">
       <div className="login-box">
-        <form>
+        <form >
           <label>
             <h1>REGISTER</h1>
           </label>
           <div>
-            <IoMdPerson /> <input type="text" placeholder="Enter Your Name" />
+            <IoMdPerson /> <input type="text" placeholder="Enter Your Name" name="username" onChange={handlechange} />
           </div>
           <div>
             <IoIosMail />
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email" name="email" onChange={handlechange}/>
           </div>
           <div>
             <RiLockPasswordFill />
-            <input type="password" placeholder="Enter your Password" />
+            <input type="password" placeholder="Enter your Password" name="password" onChange={handlechange} />
           </div>
           <div>
             <RiLockPasswordFill />
-            <input type="password" placeholder="Re-enter your Password" />
+            <input type="password" placeholder="Re-enter your Password" name="re-password" onChange={handlechange} />
           </div>
           <div>
             <FaPhone />
-            <input type="tel" placeholder="Phone" />
+            <input type="tel" placeholder="Phone" name="phone" onChange={handlechange} />
           </div>
           <div>
             <FaLocationDot />
-            <input type="text" placeholder="Address" />
+            <input type="text" placeholder="Address" name="address" onChange={handlechange}/>
           </div>
           <div>
           <CiLogin/>
-            <button className="register-button">REGISTER</button>
+            <button className="register-button"  onClick={handleSubmit}>REGISTER</button>
           </div>
           <span>or</span>
           <div>
