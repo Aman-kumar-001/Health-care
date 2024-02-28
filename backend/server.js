@@ -30,7 +30,7 @@ server.use(cors());
 server.use(bodyParser.json())
 
 
-server.post('/login' , async(req,res) =>{
+server.post('/register' , async(req,res) =>{
     let user = new User();
     user.name =req.body.username
     user.email =req.body.email
