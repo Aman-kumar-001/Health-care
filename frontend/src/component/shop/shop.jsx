@@ -31,7 +31,7 @@ useEffect(() =>{
           <div className="nav-list">
             <ul>
               <li>
-                <a onClick={() => navigate("/shop")}>SHOP</a>
+                <a onClick={() => navigate("/")}>HOME</a>
               </li>
               <li>
                 <a href="#">CART</a>
@@ -53,18 +53,18 @@ useEffect(() =>{
       </div>
 
       <div className="shop-banner">{/* //bannner of medicine */}</div>
-
+    <div className="all-products">ALL PRODUCTS</div>
       <div className="shop-item">
         {item.map((data,index) => {
           return(
             <>
-        <div  key={data.id} className="shop-item1">
+        <div  key={index} className="shop-item1">
           <div className="item-box">
             <div>
               <img src={data.url} />
             </div>
-            <div>{data.name}</div>
-            <div>{data.price}</div>
+            <div className="name">{data.name}</div>
+            <div className="price">RS: {data.price}/-</div>
             <div>
               <button>ADD TO CART</button>
             </div>
