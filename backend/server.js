@@ -35,7 +35,7 @@ server.post('/login' , async (req,res) =>{
   const alreadyUser = await User.findOne({ email: req.body.email });
   if(alreadyUser){
       if(password===req.body.password){
-        res.send("login successfull")
+        res.send({message :'login successfull', user : alreadyUser})
         
       }else{
         res.send( "password not matched")

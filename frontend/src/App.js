@@ -5,15 +5,24 @@ import Login from './component/login/login';
 import Register from './component/register/register';
 import Shop from "./component/shop/shop";
 import Cart from "./component/cart/cart";
+import { useState } from "react";
 
 function App() {
+
+  const [login , setlogin] = useState();
+
+  const handledata = (data) =>{
+    setlogin(data);
+    console.log(data);
+  }
   return (
     <div className="App">
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
-        <Route path="/register" element={<Register/>}></Route>
+        c 
+        <Route path="/register" element={<Register Ondata={handledata}/>} ></Route>
         <Route path="/shop" element={<Shop/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
         </Routes>

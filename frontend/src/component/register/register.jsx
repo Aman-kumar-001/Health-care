@@ -5,7 +5,7 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { CiLogin } from "react-icons/ci";
 import {  useNavigate  } from "react-router-dom";
 
-function Register() {
+function Register({Ondata}) {
 
   const navigate = useNavigate();
 
@@ -20,6 +20,14 @@ function Register() {
     //  e.preventDefault();
   }
 
+  const [auth , setAuth] = useState();
+
+  const loginAuth = (data) =>{
+    setAuth(data);
+    // console.log(auth);
+    Ondata(auth);
+  }
+
   const handleSubmit = async (e) =>{
     e.preventDefault();
     const response = await fetch('http://localhost:8080/login', {
@@ -30,8 +38,9 @@ function Register() {
       }
     })
     const data = await response.json();
-    console.log(data);
-    <navigate to="/"/>
+    // console.log(data);
+    loginAuth(data);
+    // <navigate to="/"/>
   }
 
   return (
