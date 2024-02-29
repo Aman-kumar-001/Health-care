@@ -6,6 +6,7 @@ const data = require('./{}.json');
 
 
 
+
 //database connect
 main().catch(err => console.log(err));
 
@@ -29,8 +30,26 @@ const server = express();
 server.use(cors());
 server.use(bodyParser.json())
 
+server.post('/login' , async (req,res) =>{
+    const {  email, password } = req.body;
+  const alreadyUser = await User.findOne({ email: req.body.email });
+  if(alreadyUser){
+      if(password===req.body.password){
+        res.send("login successfull")
+        
+      }else{
+        res.send( "password not matched")
+      }
+  }else{
+    res.send( "User not found")  
+  }
+    // console.log(req.body);
+    // res.send(req.body);
+}
+)
 
-server.post('/register' , async(req,res) =>{
+
+server.post('/register' , async (req,res) =>{
    const alreadyUser =  await User.findOne({email:req.body.email})
     if(alreadyUser){
         res.send('user already exists');
@@ -50,6 +69,7 @@ server.post('/register' , async(req,res) =>{
    
     
 })
+
 
 server.listen(8080 , () => {
     console.log("server started");
