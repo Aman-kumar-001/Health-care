@@ -1,4 +1,4 @@
-import {BrowserRouter , link ,Routes ,Route} from "react-router-dom";
+import {BrowserRouter  ,Routes ,Route} from "react-router-dom";
 import './App.css';
 import Home from './component/home/home';
 import Login from './component/login/login';
@@ -7,13 +7,17 @@ import Shop from "./component/shop/shop";
 import Cart from "./component/cart/cart";
 import { useState } from "react";
 
+
 function App() {
+
+  
+
 
   const [login , setlogin] = useState();
 
   const handledata = (data) =>{
     setlogin(data);
-    console.log(data);
+    
   }
   return (
     <div className="App">
@@ -21,8 +25,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
-        c 
-        <Route path="/register" element={<Register Ondata={handledata}/>} ></Route>
+      
+        <Route path="/register" element={login ? <Home/> :<Register Ondata={handledata} />} ></Route>
         <Route path="/shop" element={<Shop/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
         </Routes>
@@ -32,3 +36,4 @@ function App() {
 }
 
 export default App;
+//
