@@ -70,6 +70,10 @@ server.post('/register' , async (req,res) =>{
     
 })
 
+server.get('/item' , async (req,res) =>{
+    res.send(data);
+})
+
 
 server.listen(8080 , () => {
     console.log("server started");

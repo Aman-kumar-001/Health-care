@@ -12,7 +12,7 @@ function Shop() {
 
   const Getapi =  async() =>{
     // e.preventDefault();
-    const response = await fetch('http://localhost:8080/api')
+    const response = await fetch('http://localhost:8080/item')
  const data = await response.json();
  Setitem(data);
 }
