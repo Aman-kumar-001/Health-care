@@ -6,8 +6,10 @@ import Register from "./component/register/register";
 import Shop from "./component/shop/shop";
 import Cart from "./component/cart/cart";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
   const [login, setlogin] = useState();
 
   const handledata = (data) => {
@@ -22,7 +24,7 @@ function App() {
 
           <Route
             path="/register"
-            element={login ? <Home /> : <Register Ondata={handledata} />}
+            element={login ? navigate('/') : <Register Ondata={handledata} />}
           ></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
