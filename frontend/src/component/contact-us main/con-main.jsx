@@ -1,6 +1,7 @@
 import React from 'react'
 import '../contact-us main/con-main.css';
 import { useNavigate } from 'react-router-dom';
+import Contact from "../contact us/contactus";
 
 
 function ConMain() {
@@ -36,6 +37,10 @@ function ConMain() {
           </div>
         </div>
       </div>
+
+
+    <Contact/>
+
    </div>
   )
 }
