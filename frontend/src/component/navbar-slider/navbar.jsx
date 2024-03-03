@@ -1,4 +1,4 @@
-import React from "react";
+import React, {  useState } from "react";
 import "../navbar-slider/navbar.css";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
@@ -7,6 +7,17 @@ import {  useNavigate } from "react-router-dom";
 function Navbar() {
 
 const navigate = useNavigate();
+
+// const [data , Setdata] = useState();
+
+// const haldedata = () =>{
+//    Setdata(props.login);
+//    console.log(data);
+// }
+// useEffect(() => {
+//   haldedata();
+// },[])
+
   return (
     <div className="outer-nav">
       <div className="nav">

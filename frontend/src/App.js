@@ -25,7 +25,7 @@ function App() {
 
           <Route
             path="/register"
-            element={login ? <Home/> : <Register Ondata={handledata} />}
+            element={login ? <Home /> : <Register Ondata={handledata} />}
           ></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
