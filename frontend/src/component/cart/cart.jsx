@@ -45,13 +45,17 @@ function Cart() {
 
       <div className="cart-item">
       <div className="cart-section">
+        <div className="cart-box">
           <div className="">
             <img src={MED}/>
           </div>
           <div className="">Quantity:-1</div>
           <div className=""><p>RS:- 200/-</p><button>REMOVE</button></div>
         </div>
-
+        </div>
+         <div className="total">
+          <div className="">Total :- RS 2000/-</div>
+         </div>
        
       </div>
     </div>
