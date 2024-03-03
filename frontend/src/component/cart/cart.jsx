@@ -52,13 +52,23 @@ function Cart() {
           <div className="">
             <img src={MED}/>
           </div>
-          <div className="">Quantity:-1</div>
-          <div className="">RS:- 2000/-</div>
+          <div className="quantity">Quantity:-1</div>
+          <div className="price">RS:- 2000/-</div>
           <div><button>REMOVE</button></div>
         </div>
+
+        <div className="cart-box">
+          <div className="">
+            <img src={MED}/>
+          </div>
+          <div className="quantity">Quantity:-1</div>
+          <div className="price">RS:- 2000/-</div>
+          <div><button>REMOVE</button></div>
+        </div>
+        
         </div>
          <div className="total">
-          <div className="">Total :- RS 2000/-</div>
+          <div className="button">Total :- RS 2000/-</div>
          </div>
        
       </div>
