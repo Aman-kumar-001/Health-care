@@ -5,6 +5,7 @@ import Login from "./component/login/login";
 import Register from "./component/register/register";
 import Shop from "./component/shop/shop";
 import Cart from "./component/cart/cart";
+import ConMain from "./component/contact-us main/con-main"
 import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
 
@@ -28,6 +29,7 @@ function App() {
           ></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/contactus" element={<ConMain />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

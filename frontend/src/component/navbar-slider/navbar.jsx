@@ -16,17 +16,17 @@ const navigate = useNavigate();
         <div className="nav-list">
           <ul>
             <li>
-              <a  onClick={() => navigate("/shop")}>SHOP</a>
+              <a>HOME</a>
             </li>
             <li>
               <a onClick={() => navigate("/cart")}>CART</a>
             </li>
             <li>
-              <a href="#">DOCTORS</a>
+              <a  onClick={() => navigate("/shop")}>SHOP</a>
             </li>
             <li>
-              <a href="#">CONTACT-US</a>
-            </li>
+                <a onClick={() => navigate("/contactus")}>CONTACT-US</a>
+              </li>
             <li>
               <a  className="login-button" onClick={() => navigate("/login")}>
                 LOGIN/REGISTER

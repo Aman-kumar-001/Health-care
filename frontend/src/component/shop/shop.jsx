@@ -37,10 +37,10 @@ useEffect(() =>{
                 <a onClick={() => navigate("/cart")}>CART</a>
               </li>
               <li>
-                <a href="#">DOCTORS</a>
-              </li>
-              <li>
-                <a href="#">CONTACT-US</a>
+              <a  onClick={() => navigate("/shop")}>SHOP</a>
+            </li>
+            <li>
+                <a onClick={() => navigate("/contactus")}>CONTACT-US</a>
               </li>
               <li>
                 <a className="login-button" onClick={() => navigate("/login")}>
