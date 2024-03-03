@@ -43,6 +43,9 @@ function Cart() {
         <img src={MED}/>
       </div>
 
+
+<div className='cart-heading'><h2>CART SECTION</h2></div>
+
       <div className="cart-item">
       <div className="cart-section">
         <div className="cart-box">
@@ -50,7 +53,8 @@ function Cart() {
             <img src={MED}/>
           </div>
           <div className="">Quantity:-1</div>
-          <div className=""><p>RS:- 200/-</p><button>REMOVE</button></div>
+          <div className="">RS:- 2000/-</div>
+          <div><button>REMOVE</button></div>
         </div>
         </div>
          <div className="total">

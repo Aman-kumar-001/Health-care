@@ -17,6 +17,14 @@
     height: 500px;
     width: 1000px;
 }
+.cart-heading{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    
+}
 .cart-item{
   margin-top: 50px;
   height: fit-content;
@@ -26,13 +34,17 @@
 }
 .cart-section{
     flex-wrap: wrap;
-}
+    width: 70%;
+    
+}   
 .cart-box{
     display: flex;
     height: 200px;
     border: 2px solid #D3D3D3;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   
+    justify-content: space-around;
+    align-items: center;
+
 }
 .cart-section img{
     height: 200px;
