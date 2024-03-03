@@ -70,5 +70,42 @@
         "name": "Advil",
         "price": 2000,
         "url": "https://i.imgur.com/5mktRrY.png"
+      },
+      {
+        "id": 13,
+        "name": "Aspirin",
+        "price": 21.50,
+        "url": "https://i.imgur.com/5mktRrY.png"
+      },
+      {
+        "id": 14,
+        "name": "Advil",
+        "price": 2000,
+        "url": "https://i.imgur.com/jqMJE3V.png"
+      },
+      {
+        "id": 15,
+        "name": "Paracetamol",
+        "price": 70,
+        "url": "https://i.imgur.com/KeQ1BpS.png"
+      },
+      {
+        "id": 16,
+        "name": "Benadryl",
+        "price": 90,
+        "url": "https://i.imgur.com/cpXk1WO.png"
+      },
+      
+      {
+        "id": 17,
+        "name": "Ezetrol",
+        "price":  450 ,
+        "url": "https://i.imgur.com/k87Qjpy.png"
+      },
+      {
+        "id": 18,
+        "name": "euthyrox",
+        "price": 100,
+        "url": "https://i.imgur.com/umX8PKn.png"
       }
 ]

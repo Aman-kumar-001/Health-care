@@ -2,6 +2,7 @@ import React from 'react'
 import "../cart/cart.css";
 import {  useNavigate } from "react-router-dom";
 import MED from '../../images/Medicine.jpg';
+import Footer from '../footer/footer';
 
 
 function Cart() {
@@ -68,10 +69,12 @@ function Cart() {
         
         </div>
          <div className="total">
-          <div className="button">Total :- RS 2000/-</div>
+          <div className="button">Total :- RS 4000/-</div>
          </div>
        
       </div>
+
+      <Footer />
     </div>
   )
 }
