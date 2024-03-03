@@ -1,6 +1,7 @@
 import React from 'react'
 import "../cart/cart.css";
 import {  useNavigate } from "react-router-dom";
+import MED from '../../images/Medicine.jpg';
 
 
 function Cart() {
@@ -35,6 +36,23 @@ function Cart() {
             </ul>
           </div>
         </div>
+      </div>
+
+
+      <div className="cart-banner">
+        <img src={MED}/>
+      </div>
+
+      <div className="cart-item">
+      <div className="cart-section">
+          <div className="">
+            <img src={MED}/>
+          </div>
+          <div className="">Quantity:-1</div>
+          <div className=""><p>RS:- 200/-</p><button>REMOVE</button></div>
+        </div>
+
+       
       </div>
     </div>
   )
