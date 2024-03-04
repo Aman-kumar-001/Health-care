@@ -74,6 +74,10 @@ server.get('/item' , async (req,res) =>{
     res.send(data);
 })
 
+server.post('/tocart' , async (req,res) =>{
+    res.send(req.body);
+})
+
 
 server.listen(8080 , () => {
     console.log("server started");
