@@ -76,6 +76,7 @@ server.get('/item' , async (req,res) =>{
 
 server.post('/tocart' , async (req,res) =>{
     res.send(req.body);
+    console.log(req.body);
 })
 
 
