@@ -10,6 +10,7 @@ function Register({Ondata}) {
   const navigate = useNavigate();
 
   const [user , setloginUser] = useState({})
+  const [server , setserver]  = useState({})
 
   const  handlechange = (e) =>{
      setloginUser({
@@ -38,9 +39,13 @@ function Register({Ondata}) {
       }
     })
     const data = await response.json();
-    // console.log(data);
+    setserver(data);
+
     loginAuth(data);
-    // <navigate to="/"/>
+    if(user.email===server.email && user.password===server.password){
+      navigate("/")
+    }
+   
   }
 
   return (
