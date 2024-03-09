@@ -38,7 +38,7 @@ function Register({Ondata}) {
       }
     })
     const data = await response.json();
-    setserver(data);
+    console.log(data);
     
     loginAuth(data);
 
