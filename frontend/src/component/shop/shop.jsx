@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../shop/shop.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "../footer/footer";
-// import IMG from "../../images/d1.jpg";
+import {useSelector ,  useDispatch} from "react-redux";
 
 
 function Shop() {
@@ -86,7 +86,7 @@ useEffect(() =>{
             <div className="price">RS: {data.price}/-</div>
             <div>
               <button >ADD TO CART</button>
-              {/* onClick={() => handleAddToCart(data)} */}
+              
             </div>
           </div>
         </div>
