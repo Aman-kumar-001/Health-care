@@ -3,14 +3,16 @@ import "../cart/cart.css";
 import {  useNavigate } from "react-router-dom";
 import MED from '../../images/Medicine.jpg';
 import Footer from '../footer/footer';
-import {useSelector} from "react-redux"
+import {useSelector ,useDispatch} from "react-redux";
+import { removeItem } from '../../redux/slice';
 
 
 function Cart() {
-
+  const dispatch = useDispatch();
   const cartItems = useSelector((state) => state);
   console.log(cartItems);
-  console.log(cartItems.cart.length)
+
+  const total = Math.floor(cartItems.cart.reduce((a, b) => a + b.price, 0));
 
    const navigate = useNavigate();
   return (
@@ -55,16 +57,16 @@ function Cart() {
       <div className="cart-item">
       <div className="cart-section">
 
-        { Array.isArray(cartItems)&&cartItems.map((items ,index)=> {
+        { Array.isArray(cartItems.cart)&&cartItems.cart.map((items ,index)=> {
           return (
             <>
          <div className="cart-box" key={index}>
          <div className="">
-           <img src={items.cart.img}/>
+           <img src={items.img}/>
          </div>
-         <div className="quantity">{items.cart.name}</div>
-         <div className="price">RS:-{items.cart.price}</div>
-         <div><button>REMOVE</button></div>
+         <div className="quantity">{items.name}</div>
+         <div className="price">RS:-{items.price}</div>
+         <div><button onClick={() => dispatch(removeItem({ id : items.index ,name: items.name}))}>REMOVE</button></div>
        </div>
        </>
           );
@@ -75,7 +77,7 @@ function Cart() {
         
         </div>
          <div className="total">
-          <div className="button">Total :- RS 4000/-</div>
+          <div className="button">Total :- RS {total}/-</div>
          </div>
        
       </div>
