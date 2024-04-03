@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "../cart/cart.css";
 import {  useNavigate } from "react-router-dom";
 import MED from '../../images/Medicine.jpg';
 import Footer from '../footer/footer';
+import {useSelector} from "react-redux"
 
 
 function Cart() {
+
+  const cartItems = useSelector((state) => state);
+  console.log(cartItems);
+  console.log(cartItems.cart.length)
 
    const navigate = useNavigate();
   return (
@@ -49,23 +54,24 @@ function Cart() {
 
       <div className="cart-item">
       <div className="cart-section">
-        <div className="cart-box">
-          <div className="">
-            <img src={MED}/>
-          </div>
-          <div className="quantity">Quantity:-1</div>
-          <div className="price">RS:- 2000/-</div>
-          <div><button>REMOVE</button></div>
-        </div>
 
-        <div className="cart-box">
-          <div className="">
-            <img src={MED}/>
-          </div>
-          <div className="quantity">Quantity:-1</div>
-          <div className="price">RS:- 2000/-</div>
-          <div><button>REMOVE</button></div>
-        </div>
+        { Array.isArray(cartItems)&&cartItems.map((items ,index)=> {
+          return (
+            <>
+         <div className="cart-box" key={index}>
+         <div className="">
+           <img src={items.cart.img}/>
+         </div>
+         <div className="quantity">{items.cart.name}</div>
+         <div className="price">RS:-{items.cart.price}</div>
+         <div><button>REMOVE</button></div>
+       </div>
+       </>
+          );
+        })} 
+        
+
+       
         
         </div>
          <div className="total">

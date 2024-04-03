@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react";
 import "../shop/shop.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "../footer/footer";
-import {useSelector ,  useDispatch} from "react-redux";
+import {useDispatch} from "react-redux";
+import { addItem} from '../../redux/slice';
+
 
 
 function Shop() {
+
+   const dispatch = useDispatch();
+ 
   const navigate = useNavigate();
 
   const [item , Setitem ] = useState([])
@@ -85,7 +90,7 @@ useEffect(() =>{
             <div className="name">{data.name}</div>
             <div className="price">RS: {data.price}/-</div>
             <div>
-              <button >ADD TO CART</button>
+              <button onClick={() => dispatch(addItem({  name: data.name , price:data.price , img:data.url }))}>ADD TO CART</button>
               
             </div>
           </div>
