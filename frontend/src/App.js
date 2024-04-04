@@ -13,7 +13,7 @@ function App() {
   // const navigate = useNavigate();
   const [login, setlogin] = useState();
 
-  const handledata = (data) => {
+  const handledata =  (data) => {
     setlogin(data);
    
   };
