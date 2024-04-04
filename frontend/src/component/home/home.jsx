@@ -6,19 +6,13 @@ import Doctors from '../doctors/doctors';
 import Contactus from '../contact us/contactus';
 import Footer from '../footer/footer';
 
-function Home() {
+function Home({login}) {
 
-  // const [log , Setlog] = useState({});
-
-  // const handleState = (props) =>{
-    
-  //     Setlog(props.login.value);
-      
-  // }
+  
 
   return (
     <div>
-        <Navbar  />
+        <Navbar login={login} />
         <Department />
         <About/>
         <Doctors/>
