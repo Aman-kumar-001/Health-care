@@ -6,13 +6,13 @@ import Doctors from '../doctors/doctors';
 import Contactus from '../contact us/contactus';
 import Footer from '../footer/footer';
 
-function Home({login}) {
+function Home({login,handledata}) {
 
   
 
   return (
     <div>
-        <Navbar login={login} />
+      <Navbar login={login} handledata={handledata} />
         <Department />
         <About/>
         <Doctors/>

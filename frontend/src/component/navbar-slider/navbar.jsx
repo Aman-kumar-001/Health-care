@@ -1,10 +1,10 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 import "../navbar-slider/navbar.css";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import {  useNavigate } from "react-router-dom";
 
-function Navbar({login}) {
+function Navbar({login,handledata}) {
 
 const navigate = useNavigate();
 
@@ -12,6 +12,12 @@ const LOGIN = "LOGIN"; // Define LOGIN constant
   const REGISTER = "REGISTER"; // Define REGISTER constant
   const LOGOUT = "LOGOUT"
 
+  const setlogin= ()=>{
+    return login=false;
+  }
+useEffect(()=>{
+  setlogin();
+},[])
   return (
     <div className="outer-nav">
       <div className="nav">
@@ -35,7 +41,7 @@ const LOGIN = "LOGIN"; // Define LOGIN constant
             <li>
              
               <a  >
-              {login ? <button  onClick={() => navigate("/login")} className="login-button" >LOGOUT</button> : <button className="login-button" onClick={() => navigate("/login")}>LOGIN/REGISTER</button> }
+              {login ? <button  onClick={() => handledata(false)} className="login-button" >LOGOUT</button> : <button className="login-button" onClick={() => navigate("/login")}>LOGIN/REGISTER</button> }
               </a>
              
             </li>

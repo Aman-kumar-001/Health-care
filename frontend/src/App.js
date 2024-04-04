@@ -15,7 +15,9 @@ function App() {
 
   const handledata = (data) => {
     setlogin(data);
+   
   };
+  console.log("login Data", login);
   return (
     <div className="App">
       <BrowserRouter>
@@ -25,7 +27,7 @@ function App() {
 
           <Route
             path="/register"
-            element={login ? <Home login={login}/> : <Register Ondata={handledata} />}
+            element={login ? <Home login={login} handledata={handledata}/> : <Register Ondata={handledata} />}
           ></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
