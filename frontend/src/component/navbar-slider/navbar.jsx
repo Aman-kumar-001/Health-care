@@ -12,12 +12,7 @@ const LOGIN = "LOGIN"; // Define LOGIN constant
   const REGISTER = "REGISTER"; // Define REGISTER constant
   const LOGOUT = "LOGOUT"
 
-  const setlogin= ()=>{
-    return login=false;
-  }
-useEffect(()=>{
-  setlogin();
-},[])
+
   return (
     <div className="outer-nav">
       <div className="nav">
