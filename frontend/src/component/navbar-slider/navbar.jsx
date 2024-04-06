@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import {  useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, Navigation, Pagination } from "swiper/modules";
+import { A11y, Navigation, Pagination ,Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -53,11 +53,12 @@ const LOGIN = "LOGIN"; // Define LOGIN constant
       </div>
       <div className="slider">
       <Swiper
-      modules={[Navigation, Pagination, A11y]}
+      modules={[Navigation, Pagination, A11y,Autoplay]}
       spaceBetween={50}
       slidesPerView={1}
       a11y={true}
       navigation={true}
+      autoplay={true}
       pagination={{ clickable: true }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
