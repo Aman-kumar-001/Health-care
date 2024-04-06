@@ -2,48 +2,45 @@ import React, { useEffect, useState } from "react";
 import "../shop/shop.css";
 import { useNavigate } from "react-router-dom";
 import Footer from "../footer/footer";
-import {useDispatch} from "react-redux";
-import { addItem} from '../../redux/slice';
-
-
+import { useDispatch } from "react-redux";
+import { addItem } from "../../redux/slice";
+import { motion  } from "framer-motion";
 
 function Shop() {
+  const dispatch = useDispatch();
 
-   const dispatch = useDispatch();
- 
   const navigate = useNavigate();
 
-  const [item , Setitem ] = useState([])
-  const [cart , Gotocart] = useState({})
+  const [item, Setitem] = useState([]);
+  const [cart, Gotocart] = useState({});
 
-  const Getapi =  async() =>{
+  const Getapi = async () => {
     // e.preventDefault();
-    const response = await fetch('http://localhost:8080/item')
- const data = await response.json();
- Setitem(data);
-}
+    const response = await fetch("http://localhost:8080/item");
+    const data = await response.json();
+    Setitem(data);
+  };
 
-// const handleAddToCart = (item) => {
-//   const [url , name , price] = item;
-//   Gotocart();
-//   console.log(cart);
-// }
-// const Addtocart = async () =>{
-//   const res = await fetch('http://localhost:8080/tocart', {
-//     method: 'POST',
-//     body:JSON.stringify(cart),
-//     headers:{
-//       'Content-Type' : 'application/json'
-//     }
-//   })
-//   const data = await res.json();
-//   console.log(data);
-// }
+  // const handleAddToCart = (item) => {
+  //   const [url , name , price] = item;
+  //   Gotocart();
+  //   console.log(cart);
+  // }
+  // const Addtocart = async () =>{
+  //   const res = await fetch('http://localhost:8080/tocart', {
+  //     method: 'POST',
+  //     body:JSON.stringify(cart),
+  //     headers:{
+  //       'Content-Type' : 'application/json'
+  //     }
+  //   })
+  //   const data = await res.json();
+  //   console.log(data);
+  // }
 
-
-useEffect(() =>{
-  Getapi();
-},[])
+  useEffect(() => {
+    Getapi();
+  }, []);
 
   return (
     <div className="shop">
@@ -61,9 +58,9 @@ useEffect(() =>{
                 <a onClick={() => navigate("/cart")}>CART</a>
               </li>
               <li>
-              <a  onClick={() => navigate("/shop")}>SHOP</a>
-            </li>
-            <li>
+                <a onClick={() => navigate("/shop")}>SHOP</a>
+              </li>
+              <li>
                 <a onClick={() => navigate("/contactus")}>CONTACT-US</a>
               </li>
               <li>
@@ -77,40 +74,55 @@ useEffect(() =>{
       </div>
 
       <div className="shop-banner">{/* //bannner of medicine */}</div>
-    <div className="all-products">ALL PRODUCTS</div>
+      <div className="all-products">ALL PRODUCTS</div>
       <div className="shop-item">
-        {item.map((data,index) => {
-          return(
+        {item.map((data, index) => {
+          return (
             <>
-        <div  key={index} className="shop-item1">
-          <div className="item-box">
-            <div>
-              <img src={data.url} />
-            </div>
-            <div className="name">{data.name}</div>
-            <div className="price">RS: {data.price}/-</div>
-            <div>
-              <button onClick={() => dispatch(addItem({  name: data.name , price:data.price , img:data.url }))}>ADD TO CART</button>
-              
-            </div>
-          </div>
-        </div>
-        </>
-        
-       );
-      })}
+              <motion.div
+                key={index}
+                className="shop-item1"
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 50 }}
+                transition={{ duration: 0.5,
+                    delay: index * 0.1,
+                    repeat: 0, // Set to 1 to repeat once
+                    repeatType: "loop" // Set to "loop" to repeat in a loop, or "reverse" to reverse the animation on each repeat
+                  }}
+              >
+                <div className="item-box">
+                  <div>
+                    <img src={data.url} />
+                  </div>
+                  <div className="name">{data.name}</div>
+                  <div className="price">RS: {data.price}/-</div>
+                  <div>
+                    <button
+                      onClick={() =>
+                        dispatch(
+                          addItem({
+                            name: data.name,
+                            price: data.price,
+                            img: data.url,
+                          })
+                        )
+                      }
+                    >
+                      ADD TO CART
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
+            </>
+          );
+        })}
 
-      
-     <Footer/>
+        <Footer />
+      </div>
     </div>
-   </div>
   );
 }
 
 export default Shop;
 
-
-
-
-
- // 
+//
