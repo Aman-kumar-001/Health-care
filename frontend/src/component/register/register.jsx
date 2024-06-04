@@ -37,10 +37,13 @@ function Register({ Ondata }) {
       headers: {
         "Content-Type": "application/json",
       },
+    }).then((res) =>{
+      const data = response.json();
+      console.log(data);
+      loginAuth(data);
+      navigate("/");
     })
-    const data = response.json();
-        console.log(data);
-        loginAuth(data);
+   
   };
 
   return (

@@ -31,9 +31,15 @@ function Login() {
       headers:{
         'Content-Type' : 'application/json'
       }
-    })
-    const data = await response.json();
+    }).then((res) =>{
+      console.log("hello");
+      navigate("/register")
+      const data = response.json();
     console.log(data);
+    }).catch((err) => {
+      console.log(err);
+    })
+    
   }
 
   return (

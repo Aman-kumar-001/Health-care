@@ -1,7 +1,5 @@
-import React, {  useEffect, useState } from "react";
+import React  from "react";
 import "../navbar-slider/navbar.css";
-import { FaArrowLeft } from "react-icons/fa6";
-import { FaArrowRight } from "react-icons/fa";
 import {  useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { A11y, Navigation, Pagination ,Autoplay } from "swiper/modules";
@@ -16,9 +14,9 @@ function Navbar({login,handledata}) {
 
 const navigate = useNavigate();
 
-const LOGIN = "LOGIN"; // Define LOGIN constant
-  const REGISTER = "REGISTER"; // Define REGISTER constant
-  const LOGOUT = "LOGOUT"
+// const LOGIN = "LOGIN"; // Define LOGIN constant
+//   const REGISTER = "REGISTER"; // Define REGISTER constant
+//   const LOGOUT = "LOGOUT"
 
 
   return (
@@ -60,8 +58,8 @@ const LOGIN = "LOGIN"; // Define LOGIN constant
       navigation={true}
       autoplay={true}
       pagination={{ clickable: true }}
-      onSlideChange={() => console.log("slide change")}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={}
+      // onSwiper={(swiper) => console.log(swiper)}
     >
       <SwiperSlide>
         
