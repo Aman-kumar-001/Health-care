@@ -17,8 +17,6 @@ function Register({ Ondata }) {
       ...user,
       [e.target.name]: e.target.value,
     });
-    console.log(user);
-    //  e.preventDefault();
   };
 
   const [auth, setAuth] = useState();
@@ -37,14 +35,11 @@ function Register({ Ondata }) {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then((res) =>{
-      const data = response.json();
-      console.log(data);
-      loginAuth(data);
-      navigate("/");
     })
-   
-  };
+    const data = response.json();
+        console.log(data);
+        loginAuth(data);
+  }
 
   return (
     <div className="register">
