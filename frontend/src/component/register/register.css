@@ -9,12 +9,15 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(to right, #b0edef, #018ce2); 
+    /* background: linear-gradient(to right, #b0edef, #018ce2); 
+     */
+     background-color: #f4f4f4;
 }
 .register-box{
     height: 400px;
     width: 500px;
-    background-color: transparent;
+    background: linear-gradient(to right, #b0edef, #018ce2);
+    /* background-color: transparent; */
     /* border: 3px solid #32AD92; */
     outline: none;
     transition: all 0.3s ease;
