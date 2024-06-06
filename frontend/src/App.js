@@ -5,6 +5,7 @@ import Login from "./component/login/login";
 import Register from "./component/register/register";
 import Shop from "./component/shop/shop";
 import Cart from "./component/cart/cart";
+import Payment from "./component/payment/payment";
 import ConMain from "./component/contact-us main/con-main"
 import { useState } from "react";
 // import { useNavigate } from "react-router-dom";
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/payment" element={<Payment />}></Route>
 
           <Route
             path="/register"
