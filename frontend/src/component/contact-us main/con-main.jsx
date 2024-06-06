@@ -28,11 +28,11 @@ function ConMain() {
               <li>
                 <a onClick={() => navigate("/contactus")}>CONTACT-US</a>
               </li>
-              <li>
+              {/* <li>
                 <a className="login-button" onClick={() => navigate("/login")}>
                   LOGIN/REGISTER
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

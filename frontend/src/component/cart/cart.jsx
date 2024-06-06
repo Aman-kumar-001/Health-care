@@ -36,11 +36,11 @@ function Cart() {
             <li>
                 <a onClick={() => navigate("/contactus")}>CONTACT-US</a>
               </li>
-              <li>
+              {/* <li>
                 <a className="login-button" onClick={() => navigate("/login")}>
                   LOGIN/REGISTER
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -78,6 +78,8 @@ function Cart() {
         </div>
          <div className="total">
           <div className="button">Total :- RS {total}/-</div>
+         
+          <div className="button2" onClick={() => navigate("/payment")}>PAY NOW</div>
          </div>
        
       </div>
