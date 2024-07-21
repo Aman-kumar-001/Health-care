@@ -1,9 +1,9 @@
-import express from 'express';
-import cors from 'cors';
-import connectDB from './config/connection.js'; // Import connectDB correctly
+const express = require('express');
+const cors = require('cors');
+const connectDB = require('./config/connection'); // Import connectDB correctly
+const User = require('./model/userModel.js')
 
-
-const DB_URL = 'mongodb://127.0.0.1:27017/HealthCare';
+const DB_URL = 'mongodb://127.0.0.1:27017/';
 
 const server = express();
 
@@ -17,8 +17,26 @@ server.get('/home', async (req, res) => {
 });
 
 // DB connection
-// connectDB(process.env.mongodb);
 connectDB(DB_URL);
+
+
+const createUser = async () => {
+      const stu = new User({
+        name: 'aman sharma',
+        age: 21,  // age should be a Number, not a String
+        phone: 7903814915
+      });
+    
+      try {
+        await stu.save();
+        console.log('User saved successfully');
+      } catch (error) {
+        console.error('Error saving user:', error);
+      }
+    };
+    
+    // Call the function to create and save the user
+    createUser();
 
 // Start the server
 server.listen(3000, () => {
