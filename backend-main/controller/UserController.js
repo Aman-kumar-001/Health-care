@@ -13,7 +13,7 @@ const getRegister = (req, res) => {
       res.status(400).send('Missing parameters');
     }
     console.log(`${name}`);
-    // console.log(`${age}`);
+    console.log(`${age}`);
 
 };
 

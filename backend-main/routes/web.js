@@ -3,7 +3,7 @@ const {getRegister} = require('../controller/UserController.js')
 
 
 
-router.get('/register/:id' , getRegister);
+router.get('/register' , getRegister);
 
 
 module.exports = router;
