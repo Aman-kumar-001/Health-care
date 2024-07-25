@@ -36,7 +36,39 @@ const getRegister = async (req, res) => {
 
 };
 
-module.exports = { getRegister };
+
+
+const getLogin = async (req,res) =>{
+    const {email , password} = req.body;
+
+    // Basic validation
+  if (!email || !password) {
+    return res.status(400).json({ message: 'Please enter all fields' });
+  }
+
+    //validation 
+     try {
+      let loginUser = await User.findOne({email : email});
+      if(!loginUser){
+        res.status(500).json({message : "User not Found"})
+      }else{
+
+        // Check password
+    const isMatch = await User.comparePassword(password);
+    if (!isMatch) {
+      return res.status(400).json({ message: 'Invalid credentials' });
+    }else{
+      res.status(200).json({ message: 'Login successful', User });
+    }
+
+      }
+     } catch (error) {
+      console.error(error);
+    res.status(500).json({ message: 'Server error' });
+     }
+}
+
+module.exports = { getRegister , getLogin};
 
 
 
