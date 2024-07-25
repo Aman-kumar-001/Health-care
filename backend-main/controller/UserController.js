@@ -1,4 +1,6 @@
 const User = require('../model/userModel.js')
+
+
 const getRegister = async (req, res) => {
   const { username, email ,password, repassword, phone , address } = req.body;
 
@@ -58,7 +60,7 @@ const getLogin = async (req, res) => {
     if (userLogin.password !== password) {
       return res.status(400).send('Incorrect password');
   }else{
-    return res.status(200).json({message : 'Login Successfull'});
+    return res.status(200).json({message : 'Login Successfull', User : userLogin});
   }
   }
   
