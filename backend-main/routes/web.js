@@ -4,7 +4,7 @@ const {getRegister, getLogin} = require('../controller/UserController.js')
 
 
 router.get('/register' , getRegister);
-router.get('/login' , getLogin);
+router.post('/login' , getLogin);
 
 
 module.exports = router;
