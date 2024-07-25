@@ -79,7 +79,7 @@ function Login() {
             <input
               type="password"
               placeholder="Re-enter your Password"
-              name="re-password"
+              name="repassword"
               onChange={handlechange}
             />
           </div>

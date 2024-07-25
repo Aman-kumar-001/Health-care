@@ -1,19 +1,38 @@
-const getRegister = (req, res) => {
-    // const {id} = req.params;
-    // if(id){
-    //     res.send(`${id}`);
-    // }else{
-    //     res.send('param not found');
-    // }
+const User = require('../model/userModel.js')
+const getRegister = async (req, res) => {
+  const { username, email ,password, repassword, phone , address } = req.body;
 
-    const { name, age } = req.body;
-    if (name || age) {
-      res.send(`Name: ${name}`);
-    } else {
-      res.status(400).send('Missing parameters');
-    }
-    console.log(`${name}`);
-    console.log(`${age}`);
+  // Basic validation
+  if (!username || !email || !password || !repassword || !phone || !address) {
+    return res.status(400).json({ message: 'Please enter all fields' });
+  }
+
+  if (password !==  repassword) {
+    return res.status(400).json({ message: 'Passwords do not match' });
+  }
+
+  try {
+    // Check if user already exists
+    let user = await User.findOne({ email : email});
+    if (user) {
+      return res.status(400).json({ message: 'User already exists' });
+    }else{
+            // Create new user
+      user = new User({
+        name : req.body.username,
+        email: req.body.email,
+        password : req.body.password,
+        phone: req.body.phone,
+        address: req.body.address
+      });
+  
+      await user.save();
+      res.status(201).json({ message: 'User registered successfully' });
+    }  
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
 
 };
 
