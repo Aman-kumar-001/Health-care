@@ -56,7 +56,6 @@ const getLogin = async (req, res) => {
 
   //checking the password
   if(userLogin){
-      // Check password
     if (userLogin.password !== password) {
       return res.status(400).send('Incorrect password');
   }else{

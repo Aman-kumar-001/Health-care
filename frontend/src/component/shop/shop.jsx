@@ -21,22 +21,7 @@ function Shop() {
     Setitem(data);
   };
 
-  // const handleAddToCart = (item) => {
-  //   const [url , name , price] = item;
-  //   Gotocart();
-  //   console.log(cart);
-  // }
-  // const Addtocart = async () =>{
-  //   const res = await fetch('http://localhost:8080/tocart', {
-  //     method: 'POST',
-  //     body:JSON.stringify(cart),
-  //     headers:{
-  //       'Content-Type' : 'application/json'
-  //     }
-  //   })
-  //   const data = await res.json();
-  //   console.log(data);
-  // }
+  
 
   useEffect(() => {
     Getapi();
@@ -63,11 +48,7 @@ function Shop() {
               <li>
                 <a onClick={() => navigate("/contactus")}>CONTACT-US</a>
               </li>
-              {/* <li>
-                <a className="login-button" onClick={() => navigate("/login")}>
-                  LOGIN/REGISTER
-                </a>
-              </li> */}
+              
             </ul>
           </div>
         </div>
