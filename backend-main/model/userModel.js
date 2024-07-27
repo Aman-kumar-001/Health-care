@@ -7,7 +7,7 @@ const UserSchema = new mongoose.Schema({
   password : {type : String , required :true},
   phone: { type: Number, required: true },
   address : {type : String , required :true}
-});
+}, { timestamps: true });
 
 // Create the model
 const User = mongoose.model('User', UserSchema);
